@@ -1,22 +1,22 @@
-# 🧩 Problem Statement – Projet "El Jadida Océan & Ilyas El Maliki"
+# Problem Statement – Jdida Océan
 
-## 🌊 Contexte
-Le littoral d’El Jadida fait partie des zones côtières marocaines les plus fréquentées, mais il est aujourd’hui confronté à des problèmes de pollution, de gestion des déchets et de manque de sensibilisation écologique.  
-Malgré les efforts de certaines associations locales, la communication reste limitée et n’atteint pas efficacement le public jeune ni les acteurs économiques locaux.
+## Persona prioritaire
+**Salma**, 21 ans, étudiante en sciences de l’environnement, utilise son smartphone pour s’informer sur les initiatives écologiques locales et souhaite participer à des actions concrètes sur le littoral.
 
-## 👥 Publics concernés (Personas)
-- **Salma**, étudiante engagée, souhaite participer à des initiatives environnementales mais ne trouve pas assez d’informations claires et accessibles sur les réseaux sociaux.  
-- **Youssef**, jeune entrepreneur local, veut contribuer à la protection du littoral tout en valorisant son commerce, mais il manque de moyens pour communiquer et collaborer avec des acteurs engagés.  
-- **Mme Khadija**, présidente d’association, mène des actions concrètes sur le terrain mais peine à attirer des bénévoles et à donner de la visibilité à ses projets.
+## Problem Statement
+Pour Salma, qui ne trouve pas facilement des informations claires et motivantes sur les initiatives écologiques à El Jadida,  
+nous voulons créer une plateforme interactive qui centralise les actions locales et les défis environnementaux,  
+afin qu’elle puisse s’engager rapidement et efficacement dans la protection du littoral.
 
-## ⚠️ Problème principal
-Les initiatives écologiques existantes sur le littoral d’El Jadida souffrent d’un **manque de visibilité, de communication digitale et de participation citoyenne**, en particulier de la part des jeunes.
+## Hypothèse
+Si nous fournissons à Salma un espace simple et visuel pour découvrir et participer aux initiatives écologiques, elle sera plus motivée à agir et partager les actions sur les réseaux sociaux.
 
-## 💡 Proposition d’approche
-Mobiliser un influenceur marocain populaire comme **Ilyas El Maliki** permettrait de :
-- **Rendre le message écologique attractif et accessible** à un public jeune et large ;  
-- **Créer une passerelle de communication** entre associations, citoyens et entrepreneurs locaux ;  
-- **Valoriser les actions locales** à travers des campagnes digitales engageantes (vidéos, challenges, hashtags).
+## Solution proposée
+- Page d’accueil avec liste des initiatives et événements classés par date et popularité.  
+- Fonction “Participer à une action” avec inscription rapide et notifications.  
+- Intégration des campagnes de sensibilisation menées par Ilyas El Maliki pour inciter la jeunesse.
 
-## 🎯 Objectif du projet
-Créer une campagne de communication digitale, en collaboration avec Ilyas El Maliki, pour **promouvoir les initiatives écologiques et durables sur le littoral d’El Jadida**, tout en **renforçant la participation de la jeunesse et la visibilité des acteurs locaux.**
+## Critère de succès
+- Au moins 50 inscriptions d’utilisateurs pour des actions locales dans le premier mois.  
+- Taux de partage des actions sur les réseaux sociaux supérieur à 30%.  
+- Feedback positif des utilisateurs indiquant qu’ils trouvent facilement les informations et sont motivés à participer.
