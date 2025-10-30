@@ -1,0 +1,26 @@
+@startuml
+left to right direction
+skinparam packageStyle rectangle
+
+actor "Utilisateur" as U
+actor "Association" as A
+actor "Admin" as AD
+actor "Ilyas El Maliki" as I
+
+rectangle "Système Jdida Océan" {
+  (Consulter initiatives) as UC1
+  (S'inscrire à une action) as UC2
+  (Publier une initiative) as UC3
+  (Promouvoir une campagne) as UC4
+  (Partager une action sur les réseaux) as UC5
+}
+
+U --> UC1
+U --> UC2
+U --> UC5
+A --> UC3
+AD --> UC3 : valider
+AD --> UC4
+I --> UC4
+
+@enduml
