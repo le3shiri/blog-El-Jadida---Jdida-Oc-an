@@ -3,15 +3,17 @@
 namespace App\Services;
 
 use App\Models\Article;
+use App\Models\Category;
 use Illuminate\Contracts\Pagination\LengthAwarePaginator;
 use Illuminate\Support\Collection;
 
 class ArticleService
 {
-    public function getPaginatedArticles(?string $category = null, int $perPage = 10): LengthAwarePaginator
+    public function getPaginatedArticles(?int $categoryId = null, int $perPage = 10): LengthAwarePaginator
     {
         return Article::query()
-            ->when($category, fn ($query) => $query->where('category', $category))
+            ->with('category')
+            ->when($categoryId, fn ($query) => $query->where('category_id', $categoryId))
             ->orderByDesc('published_at')
             ->orderByDesc('created_at')
             ->paginate($perPage)
@@ -26,11 +28,8 @@ class ArticleService
 
     public function getAvailableCategories(): Collection
     {
-        return Article::query()
-            ->select('category')
-            ->distinct()
-            ->orderBy('category')
-            ->pluck('category')
-            ->filter();
+        return Category::query()
+            ->orderBy('name')
+            ->get();
     }
 }

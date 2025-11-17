@@ -15,9 +15,9 @@ class ArticleController extends Controller
 
     public function index(Request $request): View
     {
-        $selectedCategory = $request->query('category');
+        $selectedCategory = $request->integer('category');
 
-        $articles = $this->articleService->getPaginatedArticles($selectedCategory);
+        $articles = $this->articleService->getPaginatedArticles($selectedCategory ?: null);
         $categories = $this->articleService->getAvailableCategories();
 
         return view('articles.index', [

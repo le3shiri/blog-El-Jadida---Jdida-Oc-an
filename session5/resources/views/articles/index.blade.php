@@ -151,8 +151,8 @@
         <select id="category" name="category" onchange="this.form.submit()">
             <option value="">All</option>
             @foreach($categories as $category)
-                <option value="{{ $category }}" @selected($selectedCategory === $category)>
-                    {{ $category }}
+                <option value="{{ $category->id }}" @selected($selectedCategory === $category->id)>
+                    {{ $category->name }}
                 </option>
             @endforeach
         </select>
@@ -175,7 +175,7 @@
                 <tr>
                     <td>{{ $article->id }}</td>
                     <td>{{ $article->title }}</td>
-                    <td>{{ $article->category }}</td>
+                    <td>{{ $article->category->name ?? '—' }}</td>
                     <td>
                         @php
                             $statusClass = 'status-' . strtolower($article->status ?? '');
