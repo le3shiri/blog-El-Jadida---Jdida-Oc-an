@@ -1,0 +1,14 @@
+/vendor/
+/node_modules/
+/public/storage
+/storage/*
+!/storage/app/public
+!/storage/framework/cache/data
+!/storage/logs/.gitignore
+/bootstrap/cache/*.php
+/.env
+/.env.*
+/.idea/
+/.vscode/
+/npm-debug.log*
+/yarn-error.log*
