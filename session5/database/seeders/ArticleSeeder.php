@@ -6,6 +6,7 @@ use App\Models\Article;
 use App\Models\Category;
 use Faker\Factory as FakerFactory;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Arr;
 use Illuminate\Support\Carbon;
 
 class ArticleSeeder extends Seeder
@@ -13,8 +14,37 @@ class ArticleSeeder extends Seeder
     public function run(): void
     {
         $faker = FakerFactory::create();
-        $categoryNames = ['Travel', 'Lifestyle', 'Tech', 'Food', 'Culture', 'News'];
+        $categoryNames = [
+            'Plages & Océan',
+            'Art & Culture Mazaganaise',
+            'Gastronomie Doukkala',
+            'Vie Locale & Portraits',
+            'Événements & Festivals',
+            'Histoire & Patrimoine'
+        ];
         $statuses = ['published', 'draft', 'archived'];
+
+        $headlinePrefixes = [
+            'Chroniques d\'Al Jadida',
+            'Secrets de la Cité Portugaise',
+            'Évasion sur la Corniche',
+            'Balades Doukkalies',
+            'Carnet de plage Mazagan',
+            'Escapade gourmande à Hay Essalam',
+            'Vibes culturelles d\'El Jadida',
+            'Agenda Océanique'
+        ];
+
+        $headlineSuffixes = [
+            'les expériences à vivre absolument',
+            'adresses locales à tester cette semaine',
+            'rencontres inspirantes et initiatives solidaires',
+            'saveurs traditionnelles revisitées',
+            'balades historiques au coucher du soleil',
+            'bons plans surf et sports nautiques',
+            'coulisses des festivals doukkalis',
+            'itinéraires pour redécouvrir la médina'
+        ];
 
         $categoryIds = collect($categoryNames)
             ->mapWithKeys(function (string $name) {
@@ -33,7 +63,11 @@ class ArticleSeeder extends Seeder
             $timestamp = Carbon::instance($faker->dateTimeBetween('-60 days', 'now'));
 
             $records[] = [
-                'title' => ucfirst($faker->words(mt_rand(3, 6), true)),
+                'title' => sprintf(
+                    '%s — %s',
+                    Arr::random($headlinePrefixes),
+                    Arr::random($headlineSuffixes)
+                ),
                 'category_id' => $faker->randomElement($categoryIds->values()->all()),
                 'status' => $status,
                 'published_at' => $publishedDate,
